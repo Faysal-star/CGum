@@ -44,7 +44,10 @@ public class Feed_tab extends Fragment {
         postAdapter = new PostAdapter(getContext(),postMods);
         posts.setAdapter(postAdapter);
         String userRef = auth.getUid();
-//        assert userRef != null;
+
+        if(userRef == null){
+            return view;
+        }
         database.getReference().child("Users").child(userRef).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

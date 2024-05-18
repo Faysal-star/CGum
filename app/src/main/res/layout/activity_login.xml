@@ -62,6 +62,7 @@
             app:hintTextColor="@color/lightBlue">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailT"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:textColor="@color/white" />
@@ -83,6 +84,7 @@
             app:endIconTint="@color/lightBlue">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passT"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:inputType="textPassword"
