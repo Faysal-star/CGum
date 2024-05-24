@@ -11,14 +11,16 @@ import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
 public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
+    private AuthUtility authUtility;
     ChipNavigationBar cnb ;
-    private AuthManager authManager;
+//    private AuthManager authManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mAuth = FirebaseAuth.getInstance();
+        authUtility = AuthUtility.getInstance();
+        mAuth = authUtility.getAuth();
 
         if ( mAuth.getCurrentUser() == null) {
             Intent intent = new Intent(MainActivity.this, Login.class);
@@ -34,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void setAuthManager(AuthManager authManager) {
-        this.authManager = authManager;
-    }
+//    public void setAuthManager(AuthManager authManager) {
+//        this.authManager = authManager;
+//    }
 
     private void bottomMenu() {
         cnb.setOnItemSelectedListener(new ChipNavigationBar.OnItemSelectedListener() {
