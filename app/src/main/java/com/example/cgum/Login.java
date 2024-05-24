@@ -25,20 +25,19 @@ public class Login extends AppCompatActivity {
     private TextView welcome , hola ;
     private ImageView logoBg;
     private FirebaseAuth mAuth;
+    private AuthUtility authUtility;
+
     private CProgress cProgress;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         getWindow().setStatusBarColor(ContextCompat.getColor(this , R.color.startColor));
         cProgress = new CProgress(Login.this);
-        // Fade transition
-//        Transition fade = new Fade();
-//        fade.excludeTarget(android.R.id.statusBarBackground , true);
-//        fade.excludeTarget(android.R.id.navigationBarBackground , true);
-//        getWindow().setEnterTransition(fade);
-//        getWindow().setExitTransition(fade);
-        mAuth = FirebaseAuth.getInstance();
+
+        authUtility = AuthUtility.getInstance();
+        mAuth = authUtility.getAuth();
         email = findViewById(R.id.email);
         pass = findViewById(R.id.pass);
         loginBtn = findViewById(R.id.login);

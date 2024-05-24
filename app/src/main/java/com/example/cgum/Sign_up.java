@@ -41,6 +41,7 @@ public class  Sign_up extends AppCompatActivity {
     private CircleImageView profilePic;
     private Button reg;
     private FirebaseAuth mAuth;
+    private AuthUtility authUtility;
     private FirebaseDatabase db;
     private FirebaseStorage storage;
     private Uri imageUri;
@@ -56,7 +57,8 @@ public class  Sign_up extends AppCompatActivity {
 
         cProgress = new CProgress(Sign_up.this);
         // Firebase
-        mAuth = FirebaseAuth.getInstance();
+        authUtility = AuthUtility.getInstance();
+        mAuth = authUtility.getAuth();
         db = FirebaseDatabase.getInstance();
         storage = FirebaseStorage.getInstance();
 
