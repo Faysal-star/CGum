@@ -1,8 +1,14 @@
 package com.example.cgum;
 
+import com.google.android.material.tabs.TabLayout;
+
+import org.junit.Test;
+
+
 public class UserMsgIT {
     // user     String profilePic, userName, mail, dob, pass, role, userID, lastMsg, status, learning, teaching;
     //msgmod String msg , senderId  long timeStamp;
+    @Test
     public void testUserMsg(){
         MsgMod msg = new MsgMod("msg", "senderId", 1234567890);
         User user = new User() ;
