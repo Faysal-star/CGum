@@ -21,9 +21,6 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Login extends AppCompatActivity {
     private TextInputLayout email , pass ;
     private Button loginBtn , regBtn;
-    private Animation right , left , top;
-    private TextView welcome , hola ;
-    private ImageView logoBg;
     private FirebaseAuth mAuth;
     private AuthUtility authUtility;
 
@@ -42,9 +39,7 @@ public class Login extends AppCompatActivity {
         pass = findViewById(R.id.pass);
         loginBtn = findViewById(R.id.login);
         regBtn = findViewById(R.id.reg);
-        welcome = findViewById(R.id.welcome);
-        hola = findViewById(R.id.hola);
-        logoBg = findViewById(R.id.logoBg);
+
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -36,7 +36,6 @@ import android.view.animation.AnimationUtils;
 
 public class  Sign_up extends AppCompatActivity {
     private TextInputEditText dobTxt ;
-    private Animation top , right , bottom , left ;
     private TextInputLayout userName,email,dob,pass,rpass;
     private CircleImageView profilePic;
     private Button reg;
