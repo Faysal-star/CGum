@@ -10,13 +10,21 @@
     android:padding="30dp">
 
 
-    <ImageView
-        android:id="@+id/logoBg"
-        android:layout_width="136dp"
-        android:layout_height="139dp"
-        app:srcCompat="@drawable/app_logo"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="2dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aclonica"
+        android:text="CGum "
+        android:textColor="@color/lightBlue2"
+        android:textSize="50sp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/lightBlue"
+        android:layout_marginTop="1dp"
+        />
 
     <TextView
         android:id="@+id/hola"
